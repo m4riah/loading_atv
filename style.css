@@ -1,0 +1,88 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+  }
+  
+  main {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ball {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px #333;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  .a {
+    background-color: #333;
+    animation-name: loading-a;
+  }
+  
+  .b {
+    background-color: #ED2B2A;
+    animation-name: loading-b;
+    animation-delay: .5;
+  }
+  
+  @keyframes loading-b {
+    0% {
+      right: 0;
+    }
+    25% {
+      transform: scale(0.4);
+      right: 80px;
+      z-index: 0;
+    }
+    50% {
+      transform: scale(1);
+      right: 160px;
+    }
+    75% {
+      transform: scale(1.4);
+      right: 80px;
+      z-index: 1;
+    }
+    100% {
+      transform: scale(1);
+      right: 0px;
+    }
+  }
+  
+  @keyframes loading-a {
+    0% {
+      left: 0;
+    }
+    25% {
+      transform: scale(1.4);
+      left: 80px;
+      z-index: 1;
+    }
+    50% {
+      transform: scale(1);
+      left: 160px;
+    }
+    75% {
+      transform: scale(0.4);
+      left: 80px;
+      z-index: 0;
+    }
+    100% {
+      transform: scale(1);
+      left: 0px;
+    }
+  }
